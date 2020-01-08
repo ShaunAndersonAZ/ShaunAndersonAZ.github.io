@@ -21,3 +21,4 @@ defaults:
 
 
 This will be the initial post for testing and validation of theme, git updating, etc.
+{% raw %}{{ site.url }}{{ site.baseurl }}/assets/images/Mountains.jpg{% endraw %}
