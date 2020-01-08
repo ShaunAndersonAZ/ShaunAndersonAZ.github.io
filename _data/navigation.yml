@@ -1,7 +1,7 @@
 # main links
 main:
  - title: "Posts"
-   url: /posts/
+   url: /_posts/
 # - title: "Collections"
 #   url: /collection-archive/
 # - title: "Sitemap"
