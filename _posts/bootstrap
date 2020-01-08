@@ -1,4 +1,3 @@
----
 defaults:
   # _posts
   - scope:
@@ -11,13 +10,3 @@ defaults:
       comments: true
       share: true
       related: true
-      header:
-        teaser: /assets/images/1st-post.jpg
----
-
-
-# My First Posts
-## This is a test
-
-
-This will be the initial post for testing and validation of theme, git updating, etc.
