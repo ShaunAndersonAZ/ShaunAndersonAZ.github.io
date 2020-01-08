@@ -24,8 +24,8 @@ description              : "Wandering around the interwebz"
 url                      : "https://ShaunAndersonAZ.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "ShaunAndersonAZ/ShaunAndersonAZ.github.io"
-teaser                   : "/assets/images/Mountains.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+teaser                   : #"/assets/images/Mountains.png"
+logo                     : "/assets/images/Mountains.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
