@@ -109,7 +109,7 @@ analytics:
 author:
   name             : "Shaun Anderson"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : ""
   location         : "Edge of Phoenix, AZ"
   email            : "shaunandersonaz@gmail.com"
   links:
