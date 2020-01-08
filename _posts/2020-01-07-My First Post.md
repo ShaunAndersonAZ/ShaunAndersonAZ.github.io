@@ -22,4 +22,5 @@ published: true
 
 This will be the initial post for testing and validation of theme, git updating, etc.
 Testing an image:
-![]({{site.baseurl}}//assets/images/bio-photo.jpg)
+![ProfilePic.PNG]({{site.baseurl}}/_posts/ProfilePic.PNG)
+
