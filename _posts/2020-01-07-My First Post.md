@@ -1,8 +1,7 @@
 ---
 defaults:
-  # _posts
   - scope:
-      path: ""
+      path: ''
       type: posts
     values:
       layout: single
@@ -13,6 +12,7 @@ defaults:
       related: true
       header:
         teaser: /assets/images/1st-post.jpg
+published: true
 ---
 
 
@@ -22,4 +22,4 @@ defaults:
 
 This will be the initial post for testing and validation of theme, git updating, etc.
 Testing an image:
-(% raw %}![alt](/assets/images/bio-photo.jpg){% endraw %}
+![]({{site.baseurl}}//assets/images/bio-photo.jpg)
