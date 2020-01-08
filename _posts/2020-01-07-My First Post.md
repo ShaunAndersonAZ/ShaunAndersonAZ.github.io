@@ -11,6 +11,8 @@ defaults:
       comments: true
       share: true
       related: true
+      header:
+        teaser: /assets/images/1st-post.jpg
 ---
 
 
