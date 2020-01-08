@@ -10,8 +10,6 @@ defaults:
       comments: true
       share: true
       related: true
-      header:
-        teaser: /assets/images/1st-post.jpg
 published: true
 ---
 
@@ -22,5 +20,5 @@ published: true
 
 This will be the initial post for testing and validation of theme, git updating, etc.
 Testing an image:
-![ProfilePic.PNG]({{site.baseurl}}/assets/ProfilePic.PNG)
+![ProfilePic.PNG]({{site.baseurl}}/assets/images/ProfilePic.PNG)
 
