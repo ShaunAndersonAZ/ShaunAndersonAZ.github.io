@@ -35,6 +35,11 @@ gesture swipe up 4 xdotool key ctrl+F9
 
 Save and close the file.
 
+The program requires you to be part of the ``` input ``` group:
+```
+usermod -aG input <username>
+```
+
 Start the program with the command line:
 ```
 libinput-gestures-setup start
