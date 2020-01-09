@@ -18,12 +18,28 @@ header:
 # 4 Finger Swipe
 ## Figuring it out on KDE 5
 
+###Install 
+Install the prerequisites:
+```
+sudo apt install libinput-tools xdotool wmctrl
+```
+
 Clone the GH Repo:
 ```
 git clone https://github.com/bulletmark/libinput-gestures
 ```
 
-Change to the directory and edit the ```libinput-gestures.conf``` file.
+Change to the directory and install:
+```
+sudo make install
+```
+*-OR-*
+```
+sudo ./libinput-gestures-setup install
+```
+
+### Configure
+Edit the ```libinput-gestures.conf``` file.
 
 Add the following in the 'SWIPE GESTURES' section:
 ```
