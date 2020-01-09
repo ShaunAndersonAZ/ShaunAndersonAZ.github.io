@@ -28,3 +28,11 @@ This will be the initial post for testing and validation of theme, git updating,
 Testing an image:
 ![ProfilePic.PNG]({{site.baseurl}}/assets/images/ProfilePic.PNG)
 
+<script src="https://utteranc.es/client.js"
+        repo="[ENTER REPO HERE]"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
