@@ -15,10 +15,9 @@ header:
   overlay_image: /assets/images/touchpad.jpeg
 ---
 
-# 4 Finger Swipe
-## Figuring it out on KDE 5
+Figuring it out on KDE 5
 
-###Install 
+### Install 
 Install the prerequisites:
 ```
 sudo apt install libinput-tools xdotool wmctrl
