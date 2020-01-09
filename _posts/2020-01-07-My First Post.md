@@ -11,6 +11,12 @@ defaults:
       share: true
       related: true
 published: true
+title: "Custome overlay image"
+header:
+  overlay_image: /assets/images/rocky-mtns.jpg
+  caption: "[CC License](https://creativecommons.org)"
+categories:
+  - Testing
 ---
 
 
