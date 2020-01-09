@@ -12,6 +12,7 @@ defaults:
       related: true
 published: true
 header:
+  title: "Updated title"
   overlay_image: /assets/images/rocky-mtns.jpg
   caption: "[CC License](https://creativecommons.org)"
 categories:
