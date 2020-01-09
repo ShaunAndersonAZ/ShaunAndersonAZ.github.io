@@ -39,10 +39,6 @@ Start the program with the command line:
 ```
 libinput-gestures-setup start
 ```
-
-
-
-# Script required for comments to be enabled.
 <script src="https://utteranc.es/client.js"
         repo="[ENTER REPO HERE]"
         issue-term="pathname"
