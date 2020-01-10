@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "en-US"
 title                    : "Things to remember"
 title_separator          : "-"
-subtitle                 : "A place to keep things.  Input welcome, opinions are not"
+subtitle                 : "A place to keep things."
 name                     : "Shaun Anderson"
 description              : #
 url                      : "https://ShaunAndersonAZ.github.io"
