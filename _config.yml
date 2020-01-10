@@ -16,15 +16,15 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Internet Wanderlust"
+title                    : "Things to remember"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "A place to keep things.  Input welcome, opinions are not"
 name                     : "Shaun Anderson"
-description              : "Wandering around the interwebz"
+description              : #
 url                      : "https://ShaunAndersonAZ.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "ShaunAndersonAZ/ShaunAndersonAZ.github.io"
-teaser                   : #"/assets/images/Mountains.png"
+teaser                   : "/assets/images/500x300teaser.jpeg"
 logo                     : #"/assets/images/Mountains.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
