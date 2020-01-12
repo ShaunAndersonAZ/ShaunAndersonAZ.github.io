@@ -3,7 +3,7 @@ header:
   overlay_image: /assets/images/touchpad.jpeg
 ---
 
-Figuring it out on KDE 5
+Enabling 4 finger swipe on KDE 5
 
 ### Install 
 Install the prerequisites:
@@ -45,7 +45,7 @@ Start the program with the command line:
 libinput-gestures-setup start
 ```
 <script src="https://utteranc.es/client.js"
-        repo="[ENTER REPO HERE]"
+        repo="shaunandersonaz/shaunandersonaz.github.io"
         issue-term="pathname"
         theme="github-dark"
         crossorigin="anonymous"
