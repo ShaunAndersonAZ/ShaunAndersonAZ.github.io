@@ -1,6 +1,6 @@
 ---
 header:
-  overlay_image: #/assets/images/rocky-mtns.jpg
+  overlay_image: /assets/images/kodi.jpg
   caption: #"[CC License](https://creativecommons.org)"
 ---
 
