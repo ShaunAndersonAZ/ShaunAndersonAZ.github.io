@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "en-US"
 title                    : "Things to remember"
 title_separator          : "-"
-subtitle                 : "A place to keep things."
+subtitle                 : "Not relearning things since 2020."
 name                     : "Shaun Anderson"
 description              : #
 url                      : "https://ShaunAndersonAZ.github.io"
