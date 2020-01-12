@@ -1,10 +1,7 @@
 ---
-published: true
 header:
   overlay_image: #/assets/images/rocky-mtns.jpg
   caption: #"[CC License](https://creativecommons.org)"
-categories:
-        #- Testing
 ---
 
 # Installing travel Pi/Kodi

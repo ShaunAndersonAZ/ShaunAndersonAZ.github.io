@@ -5,7 +5,7 @@ header:
 
 Enabling 4 finger swipe on KDE 5
 
-I have to use Windows for my work laptop.  While I'm not a fan of using Windows, one of the features I actually like is the ability to 4 finger swipe up to expose all windows on the desktop.  I have typically enabled this in the past by using hot-corners and this works great, however I like the ability to do it from the touchpad as well.  I found a few different links online and ended up getting this to work by following these steps.
+This is to enable the ability to 4 finger swipe up to expose all windows on the desktop.  I have typically enabled this in the past by using hot-corners and this works great, however I like the ability to do it from the touchpad as well.  I found a few different links online and ended up getting this to work by following these steps.
 
 ### Install 
 Install the prerequisites:
