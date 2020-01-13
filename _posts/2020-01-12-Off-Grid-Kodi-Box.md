@@ -59,6 +59,7 @@ Perform basic Linux-y stuff
 **kodi**
   - Create a simple systemd unit file
     - ``` vim kodi.service ```
+
 ```
 [Unit]
 Description=Kodi standalone
@@ -75,6 +76,7 @@ Restart=on-abort
 WantedBy=multi-user.target
 
 ```
+  
   - Move to  proper directory. 
      - ```  mv kodi.service /etc/systemd/system/kodi.service ```
   - Enable service
