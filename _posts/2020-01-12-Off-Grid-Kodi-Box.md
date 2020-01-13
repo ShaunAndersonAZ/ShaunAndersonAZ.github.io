@@ -90,9 +90,8 @@ WantedBy=multi-user.target
   - https://howtoraspberrypi.com/create-a-wi-fi-hotspot-in-less-than-10-minutes-with-pi-raspberry/
 
 
-# Script required for comments to be enabled.
 <script src="https://utteranc.es/client.js"
-        repo="[ENTER REPO HERE]"
+        repo="shaunandersonaz/shaunandersonaz.github.io"
         issue-term="pathname"
         theme="github-dark"
         crossorigin="anonymous"

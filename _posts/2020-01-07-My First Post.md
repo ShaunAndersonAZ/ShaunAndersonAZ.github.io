@@ -18,7 +18,7 @@ Testing an image:
 ![ProfilePic.PNG]({{site.baseurl}}/assets/images/ProfilePic.PNG)
 
 <script src="https://utteranc.es/client.js"
-        repo="[ENTER REPO HERE]"
+        repo="shaunandersonaz/shaunandersonaz.github.io"
         issue-term="pathname"
         theme="github-dark"
         crossorigin="anonymous"
