@@ -6,7 +6,7 @@ header:
 
 # Installing travel Pi/Kodi
 
-~~Using Buster distro downloaded from~~ Using stretch distro from [raspberrypi.org](https://raspberrypi.org/downloads/)
+Using stretch distro from [raspberrypi.org](https://raspberrypi.org/downloads/)
 
 * Burn .zip file, not the extracted .img file using etcher *
 
@@ -36,7 +36,7 @@ Run raspi-config to set network and other associated settings
     - Change GL Driver (Original non-GL driver)
 
 Perform basic Linux-y stuff
-  - Create ``` kodi ``` account
+  - Create  kodi  account
     - ``` useradd kodi  ```
     - ``` sudo passwd kodi ```
     - ``` usermod -aG <groups to match pi user> kodi ```
