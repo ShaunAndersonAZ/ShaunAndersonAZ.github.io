@@ -5,4 +5,3 @@ header:
 
 Configure ssh on Ansible with Vagrant
 
-T
