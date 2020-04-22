@@ -72,11 +72,11 @@ The bulk of the settings will be fine for this application.  I'm not concerned a
 
  
 
-## Install Packages
-**Using apt, install the following**
-  - ``` lightdm ```
-  - ``` usbmount ```
-  - ``` neovim ```
+## Setup RPI 
+We need to intall some prerequisites. Using apt, install the following:
+  - ``` lightdm ``` This is required to configure autologin.
+  - ``` usbmount ``` This is required to mount the external drive housing our media
+  - ``` neovim ``` This is my editor of choice
   - ``` kodi ```
 
 ### Configure Packages
