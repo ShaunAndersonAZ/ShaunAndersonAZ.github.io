@@ -5,4 +5,4 @@ header:
 
 Configure ssh on Ansible with Vagrant
 
-T
+Add one line from C1 laptop
