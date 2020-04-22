@@ -4,19 +4,30 @@ header:
   caption: #"[CC License](https://creativecommons.org)"
 ---
 
-# Installing travel Pi/Kodi
+# Installing an off-grid Pi running Kodi for my RV/Toy Hauler. 
+I recently purchased a Toy Hauler and wanted to setup a small off-grid media server that I could use while on cold-rainy nights when a fire wwasn't an option. I found a few guides that helped (links that helped are below) but this is first and foremost for future me, when I want to do this again, and don't want to re-research, or re-re-research all of this.
 
-Using stretch distro from [raspberrypi.org](https://raspberrypi.org/downloads/)
+For this guide I'm using a Raspberry Pi 3B+ and I installed Raspbian Buster on it.  I had this working for a friend on Stretch, so either should work with a few minor differences that I found.
 
+## Pi Setup
+Download your Raspbian image from [raspberrypi.org](https://raspberrypi.org/downloads/)
+Depending on what OS you're using (I'm using 19.10 Kubuntu) burn this to the SD Card of the Pi.
 * Burn .zip file, not the extracted .img file using etcher *
+* For other methods you're on your own...I use Etcher *
 
-## Enable ssh
-Create empty file in /boot
+Once the image is finished writing to the SD Card, you may need to eject the SD Card and reinsert it.  Your system should pick up two mount points, but we're concerned with the `/boot` one.
+
+In order to enable ssh we'll want to create an empty file in /boot
 ``` touch ssh ```
 
+Eject the SD card, insert into your Pi and boot it up. For this setup it is _probably_ best to connect to your network over the ethernet port as the next step is going to configure your wifi interface for the RaspAP software.  I haven't tried both, this is just my workflow and has been successful so...
 
-## Configure with raspi-config
-Run raspi-config to set network and other associated settings
+At the time of writing pi login info is:
+Username: `pi`
+Passwqord: `raspbian`
+
+### Configure the pi using raspi-config
+Run `sudo raspi-config` to set network and other associated settings
   - Change Password
   - Network Options
     - Configure hostname
@@ -35,12 +46,30 @@ Run raspi-config to set network and other associated settings
     - Configure memory splitting (give as much memory as possible to GPU)
     - Change GL Driver (Original non-GL driver)
 
-Perform basic Linux-y stuff
-  - Create  kodi  account
-    - ``` useradd kodi  ```
-    - ``` sudo passwd kodi ```
-    - ``` usermod -aG <groups to match pi user> kodi ```
-    - ``` sudo visudo ```
+
+## RaspAP Software
+I set down the path of using a customized hostapd configuration before I found this.  It is a learning experience to configure this manually, but if you want something to work then RaspAP is the stuff. Check out their [Github page](https://github.com/billz/raspap-webui) or their [Webpage](https://raspap.com).
+
+I opted for the super-simple **Quick Installer** method.  Please read through the documentation and I by no means condone simply piping things to bash prior to reading them.  That said, to get started with the quick installer:
+
+```# curl -sL https://install.raspap.com | bash ```
+
+As their documentation states the raspap software creates a wifi AP with the following:
+  - IP 10.3.141.1
+    - Username: admin
+    - Password: secret
+  - SSID: ```raspi-webgui```
+  - Password: ChangeMe
+
+I have had issues connecting to this AP while the Pi was still connected via ethernet cable.  Once you login to the RaspAP AP you can configure the settings there if you so desire.
+  - Change the wifi country
+  - Change the PSK key
+  - Change the SSID
+
+Restart the hotspot and you'll need to reconnect to your new SSID.
+
+The bulk of the settings will be fine for this application.  I'm not concerned about VPN, DHCP, etc as this is intended to be an **OFF-GRID** Kodi box.  The only reason I'm setting up an AP is so that we can control kodi via the Kore app.  At most I think I'll have 5 devices ever connected to this AP.  If this doesn't fit your use, then dig further into the settings that will work for you.
+
  
 
 ## Install Packages
@@ -89,7 +118,13 @@ WantedBy=multi-user.target
   - https://github.com/billz/raspap-awesome
   - https://howtoraspberrypi.com/create-a-wi-fi-hotspot-in-less-than-10-minutes-with-pi-raspberry/
 
-
+## ##Sandbox##
+Perform basic Linux-y stuff
+  - Create  kodi  account
+    - ``` useradd kodi  ```
+    - ``` sudo passwd kodi ```
+    - ``` usermod -aG <groups to match pi user> kodi ```
+    - ``` sudo visudo ``` and add kodi to superuser.  This is probably not needed, but for an off-grid box, I'm putting convenience first here.
 <script src="https://utteranc.es/client.js"
         repo="shaunandersonaz/shaunandersonaz.github.io"
         issue-term="pathname"
