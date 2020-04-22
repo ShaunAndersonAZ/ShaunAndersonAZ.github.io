@@ -3,7 +3,7 @@ header:
   overlay_image: /assets/images/kodi.jpg
   caption: #"[CC License](https://creativecommons.org)"
 ---
-# Off-Grid Kodi Box
+# Creating an Off-Grid Kodi Box
 
 ## Installing an off-grid Pi running Kodi for my RV/Toy Hauler. 
 I recently purchased a Toy Hauler and wanted to setup a small off-grid media server that I could use while on cold-rainy nights when a fire wasn't an option. I found a few guides that helped (links that helped are below) but this is first and foremost for future me, when I want to do this again, and don't want to re-research, or re-re-research all of this.
