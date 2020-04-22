@@ -3,9 +3,10 @@ header:
   overlay_image: /assets/images/kodi.jpg
   caption: #"[CC License](https://creativecommons.org)"
 ---
+# Off-Grid Kodi Box
 
-# Installing an off-grid Pi running Kodi for my RV/Toy Hauler. 
-I recently purchased a Toy Hauler and wanted to setup a small off-grid media server that I could use while on cold-rainy nights when a fire wwasn't an option. I found a few guides that helped (links that helped are below) but this is first and foremost for future me, when I want to do this again, and don't want to re-research, or re-re-research all of this.
+## Installing an off-grid Pi running Kodi for my RV/Toy Hauler. 
+I recently purchased a Toy Hauler and wanted to setup a small off-grid media server that I could use while on cold-rainy nights when a fire wasn't an option. I found a few guides that helped (links that helped are below) but this is first and foremost for future me, when I want to do this again, and don't want to re-research, or re-re-research all of this.
 
 For this guide I'm using a Raspberry Pi 3B+ and I installed Raspbian Buster on it.  I had this working for a friend on Stretch, so either should work with a few minor differences that I found.
 
@@ -22,9 +23,9 @@ In order to enable ssh we'll want to create an empty file in /boot
 
 Eject the SD card, insert into your Pi and boot it up. For this setup it is _probably_ best to connect to your network over the ethernet port as the next step is going to configure your wifi interface for the RaspAP software.  I haven't tried both, this is just my workflow and has been successful so...
 
-At the time of writing pi login info is:
+At the time of writing the default pi login info is:
 Username: `pi`
-Passwqord: `raspbian`
+Password: `raspbian`
 
 ### Configure the pi using raspi-config
 Run `sudo raspi-config` to set network and other associated settings
@@ -48,9 +49,9 @@ Run `sudo raspi-config` to set network and other associated settings
 
 
 ## RaspAP Software
-I set down the path of using a customized hostapd configuration before I found this.  It is a learning experience to configure this manually, but if you want something to work then RaspAP is the stuff. Check out their [Github page](https://github.com/billz/raspap-webui) or their [Webpage](https://raspap.com).
+I set down the path of using a customized hostapd configuration before I found this.  It is a learning experience to configure this manually, but if you want something to just work then RaspAP is the stuff. Check out their [Github page](https://github.com/billz/raspap-webui) or their [Webpage](https://raspap.com).
 
-I opted for the super-simple **Quick Installer** method.  Please read through the documentation and I by no means condone simply piping things to bash prior to reading them.  That said, to get started with the quick installer:
+I opted for the super-simple **Quick Installer** method.  Please read through the documentation, I by no means condone simply piping things to bash prior to reading them.  That said, to get started with the quick installer:
 
 ```# curl -sL https://install.raspap.com | bash ```
 
@@ -68,24 +69,25 @@ I have had issues connecting to this AP while the Pi was still connected via eth
 
 Restart the hotspot and you'll need to reconnect to your new SSID.
 
-The bulk of the settings will be fine for this application.  I'm not concerned about VPN, DHCP, etc as this is intended to be an **OFF-GRID** Kodi box.  The only reason I'm setting up an AP is so that we can control kodi via the Kore app.  At most I think I'll have 5 devices ever connected to this AP.  If this doesn't fit your use, then dig further into the settings that will work for you.
+The bulk of the default settings will be fine for this application.  I'm not concerned about VPN, DHCP, etc as this is intended to be an **OFF-GRID** Kodi box.  The only reason I'm setting up an AP is so that we can control Kodi via the Kore app.  At most I think I'll have 5 devices ever connected to this AP.  If this doesn't fit your use, then dig further into the settings that will work for you.
 
  
 
 ## Setup RPI 
 We need to intall some prerequisites. Using apt, install the following:
-  - ``` lightdm ``` This is required to configure autologin.
-  - ``` usbmount ``` This is required to mount the external drive housing our media
+  - ``` lightdm ``` This is required to configure autologin
+  - ``` usbmount ``` This is required to mount the external drive containing our media
   - ``` neovim ``` This is my editor of choice
-  - ``` kodi ```
+  - ``` kodi ``` The reason we're all here
 
 ### Configure Packages
+We need to make a few small changes to config files to get the drive to automount over USB. 
 
 **usbmount**
   - (Buster) Modify the ``` /lib/systemd/system/systemd-udevd.service ``` file and change the line that says ```PrivateMounts=yes ``` to ``` PrivateMounts=No ``` and then reboot.  After the reboot the USB attached external drive mounted at /media/usb0
   - (Jessie) Modify the ``` /lib/systemd/system/systemd-udevd.service ``` file and change the line that says ``` MountFlags=slave ``` to ``` MountFlags=shared ``` and reboot. USB attached external drive will mount at /media/usb0 (this can be modified in the ``` /etc/usbmount/usbmount.conf ``` config file.
 
-**kodi**
+**Kodi**
   - Create a simple systemd unit file
     - ``` vim kodi.service ```
 
@@ -111,20 +113,20 @@ WantedBy=multi-user.target
   - Enable service
     - ``` sudo systemctl enable kodi.service ```
 
+Once you reboot, you _should_ have the following:
+  - SSID to connect to
+  - USB drive automounted at /media/usb0
+  - Kodi autostarted and coming through the HDMI output to whatever TV it's connected to
+
+My use-case is to plug this in, turn it on, connect to the wifi AP and use [Kore](https://kodi.wiki/view/Kore) to control Kodi.  Sorry iPhone users...you're on your own.
 
 ### Some stones on the path....
+These are a few of the articles that helped me get here.
   - https://superuser.com/questions/1432570/limit-pcmanfm-or-udisks2-automount-usb-drive-read-only
   - https://feldspaten.org/2019/04/04/getting-kodi-to-run-nicely-on-raspbian/
   - https://github.com/billz/raspap-awesome
   - https://howtoraspberrypi.com/create-a-wi-fi-hotspot-in-less-than-10-minutes-with-pi-raspberry/
 
-## ##Sandbox##
-Perform basic Linux-y stuff
-  - Create  kodi  account
-    - ``` useradd kodi  ```
-    - ``` sudo passwd kodi ```
-    - ``` usermod -aG <groups to match pi user> kodi ```
-    - ``` sudo visudo ``` and add kodi to superuser.  This is probably not needed, but for an off-grid box, I'm putting convenience first here.
 <script src="https://utteranc.es/client.js"
         repo="shaunandersonaz/shaunandersonaz.github.io"
         issue-term="pathname"
