@@ -120,6 +120,11 @@ Once you reboot, you _should_ have the following:
 
 My use-case is to plug this in, turn it on, connect to the wifi AP and use [Kore](https://kodi.wiki/view/Kore) to control Kodi.  Sorry iPhone users...you're on your own.
 
+As another note to myself, when adding sources in Kodi, it's not enough to select the folder in the 'choose sources' dialog.  You have to hit the add button which will take you to designate what type of media the source represents so that the proper scraper can be used to get media info.
+
+ToDo:
+I want to work on an Ansible playbook to build this from scratch. 
+
 ### Some stones on the path....
 These are a few of the articles that helped me get here.
   - https://superuser.com/questions/1432570/limit-pcmanfm-or-udisks2-automount-usb-drive-read-only
