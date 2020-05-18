@@ -31,7 +31,7 @@ The Shelly 1 controller can be powered by 12V or 120 depending on the jumper set
 
 The fantastic thing about this is that I can keep my original plan intact by feeding the 12v power from the battery that powers the gate, it's super small, gives you local control, and integrates into Home Assistant. 
 
-The Shelly is a great little device.  You're able to use a variety of voltages, AC or DC to power it while not affecting the switching voltages you want to control.  A perfect article I stumbled across is [https://www.facebook.com/notes/shelly-support-group-english-version/can-i-use-a-shelly1-to-control-_____-does-it-have-to-be-the-same-voltage/2010703589028995/?hc_location=ufi](here).
+The Shelly is a great little device.  You're able to use a variety of voltages, AC or DC to power it while not affecting the switching voltages you want to control.  A perfect article I stumbled across is ![here](https://www.facebook.com/notes/shelly-support-group-english-version/can-i-use-a-shelly1-to-control-_____-does-it-have-to-be-the-same-voltage/2010703589028995/?hc_location=ufi)
 
 So if we look at the pinout of the Shelly 1, it's pretty straight-forward what we can do.  N+ for power, L- for common, SW is our switched input, and I/O stand for In and Out.
 
@@ -39,7 +39,13 @@ Referring back to the image of the Mighty Mule board above, you can see the AUX 
 ![Mighty Mule Board](/assets/images/mmboardaux.jpg)
 
 Our simplified wiring schematic (I'm not an EE) looks something like this:
-![Board Wiring](/assets/images/boardpinout.jpg 
+![Board Wiring](/assets/images/boardpinout.jpg)
+
+
+# Physical stuff...
+
+So now we have a simple device that is getting power from the Mighty Mule board, and we have a switched input that works via a push-button, OR via the electronic switch via the Shelly phone app. I'm not going to go into the Shelly setup, there are plenty of places to find that info.  The one thing that is critical however is the 'Timer' configuraion. As the shelly is a switch, I don't want to have to switch it on, then quickly switch it off.  Luckily there is a timer function on the Shelly.  I set this to 1 second.  I can turn the switch on, then it automatically turns off after one second, exactly what I need to simulate an RF door opener.
+![Timer Config](/assets/images/timerconfig.jpg)
 
 
 #Script required for comments to be enabled.
