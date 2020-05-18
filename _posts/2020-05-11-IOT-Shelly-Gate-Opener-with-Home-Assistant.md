@@ -24,16 +24,25 @@ It's too easy to create something that looks like it fell out of the pocket of o
 # The Implementation
 
 I started down the path of an uber slick ESP8266 board with a mosfet relay, DC voltage regulator to power from the 12V battery that runs the gate..blah blah blah.  I ran into an issue where on a power reset the ESP8266 wouldn't boot and the 12V circuit would open which is basically the equivalent of your annoying nephew holding down the gate button.  I decided I would save some frustration and use something that is pretty close to perfect for this type of implementation...the [Shelly 1](https://shelly.cloud/shelly1-open-source).
+
 The Shelly 1 controller can be powered by 12V or 120 depending on the jumper setting.
 
 ![Shelly Voltage Select](/assets/images/ShellyVoltageSelect.jpg)
 
 The fantastic thing about this is that I can keep my original plan intact by feeding the 12v power from the battery that powers the gate, it's super small, gives you local control, and integrates into Home Assistant. 
 
+The Shelly is a great little device.  You're able to use a variety of voltages, AC or DC to power it while not affecting the switching voltages you want to control.  A perfect article I stumbled across is [https://www.facebook.com/notes/shelly-support-group-english-version/can-i-use-a-shelly1-to-control-_____-does-it-have-to-be-the-same-voltage/2010703589028995/?hc_location=ufi](here).
+
+So if we look at the pinout of the Shelly 1, it's pretty straight-forward what we can do.  N+ for power, L- for common, SW is our switched input, and I/O stand for In and Out.
+
+Referring back to the image of the Mighty Mule board above, you can see the AUX output with H and L options.  Luckily for this project, the 'H' option is a stable 12V power source.
+![Mighty Mule Board](/assets/images/mmboardaux.jpg)
+
+Our simplified wiring schematic (I'm not an EE) looks something like this:
+![Board Wiring](/assets/images/boardpinout.jpg 
 
 
-
-# Script required for comments to be enabled.
+#Script required for comments to be enabled.
 <script src="https://utteranc.es/client.js"
         repo="shaunandersonaz/shaunandersonaz.github.io"
         issue-term="pathname"
