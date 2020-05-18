@@ -6,8 +6,10 @@ header:
 categories:
         #- Testing
 ---
-I recently built a set of RV gates to get into the back half of our property.  I acquired a pair of Mighty Mule MM360 gate openers to open the gates.  The MM360 is a medium duty gate opener, but was more than capable of controlling the gates I welded, despite them being constructed of oil field pipe and weighing probably around #300 lbs each.  One of these I won on an auction site and the  only thing wrong with it was that the transmitter didn't work.  After a bit of tinkering I realized that the on board connections to control various accessories worked fine. I was able to close the circuit between 'Common' and 'Cycle' by simply shorting two wires together.
+I recently built a set of RV gates to get into the back half of our property.  I acquired a pair of Mighty Mule MM360 gate openers to open the gates.  The MM360 is a medium duty gate opener, but was more than capable of controlling the gates I welded, despite them being constructed of oil field pipe and weighing probably around #300 lbs each.  One of these I won on an auction site and the  only thing wrong with it was that the transmitter didn't work.  After a bit of tinkering I realized that the on board connections to control various accessories worked fine. I was able to activate the gate by simply shorting two wires together between 'Common' and 'Cycle'.
 <INSERT IMAGE HERE>
+The Shelly One controller can be powered by 12V or 120 depending on the jumper setting.
+<INSERT shelly iamge>
 
 
 # Script required for comments to be enabled.
