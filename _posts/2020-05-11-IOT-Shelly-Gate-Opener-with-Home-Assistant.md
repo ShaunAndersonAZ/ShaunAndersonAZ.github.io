@@ -39,7 +39,7 @@ Referring back to the image of the Mighty Mule board above, you can see the AUX 
 ![Mighty Mule Board](/assets/images/mmboardaux.jpg)
 
 Our simplified wiring schematic (I'm not an EE) looks something like this:
-![Board Wiring](/assets/images/boardpinout.jpg)
+![Board Wiring](/assets/images/boardpinout.JPG)
 
 
 # Physical stuff...
