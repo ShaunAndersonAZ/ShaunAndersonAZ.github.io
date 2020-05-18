@@ -8,7 +8,7 @@ categories:
 ---
 I recently built a set of RV gates to get into the back half of our property.  I acquired a pair of Mighty Mule MM360 gate openers to open the gates.  The MM360 is a medium duty gate opener, but was more than capable of controlling the gates I welded, despite them being constructed of oil field pipe and weighing probably around #300 lbs each.  One of these I won on an auction site and the  only thing wrong with it was that the transmitter didn't work.  After a bit of tinkering I realized that the on board connections to control various accessories worked fine. I was able to activate the gate by simulating a momentary button press by shorting the two wires together between 'Common' and 'Cycle'.  
 
-![GateCircuit](/assets/images/circuit.jpg){:height="600px" width="800px"}
+![GateCircuit](/assets/images/circuit.jpg)
 
 # The strategy
 ## WiFi connected:
