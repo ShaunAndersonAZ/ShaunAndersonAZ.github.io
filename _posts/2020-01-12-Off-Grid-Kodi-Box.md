@@ -13,8 +13,8 @@ For this guide I'm using a Raspberry Pi 3B+ and I installed Raspbian Buster on i
 ## Pi Setup
 Download your Raspbian image from [raspberrypi.org](https://raspberrypi.org/downloads/)
 Depending on what OS you're using (I'm using 19.10 Kubuntu) burn this to the SD Card of the Pi.
-* Burn .zip file, not the extracted .img file using etcher *
-* For other methods you're on your own...I use Etcher *
+* Burn .zip file, not the extracted .img file using etcher 
+* For other methods you're on your own...I use Etcher 
 
 Once the image is finished writing to the SD Card, you may need to eject the SD Card and reinsert it.  Your system should pick up two mount points, but we're concerned with the `/boot` one.
 
