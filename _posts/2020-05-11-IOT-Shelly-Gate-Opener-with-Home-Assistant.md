@@ -50,7 +50,8 @@ So now we have a simple device that is getting power from the Mighty Mule board,
 I mocked this up on my project desk and confirmed that everything was working. I used a 12V power supply to act as my board power, a small strip of 12V leds to ensure my 'Cycle' circuit was closing as desired and that the timer function was seemingly solid.
 
 # Home Assistant configuration
-I [Home Assistant](https://www.home-assistant.io) for my home automation platform.  In the past I have utilized a local, dockerized MQTT server to control my Shelly devices.  Recently I stumbled onto an integration in the [Home Assistant Community Store](https://www.hacs.xyz) for Shelly. The GitHub project can be found [here](https://github.com/StyraHem/ShellyForHASS). Once this is installed and configured any new Shelly device you setup in the app is dynamically configured in the Home Assistant interface. After a quick rename and some Lovelace updates, I have the two Shelly devices configured in my Lovelace UI.
+I use [Home Assistant](https://www.home-assistant.io) for my home automation platform.  In the past I have utilized a local, dockerized MQTT server to control my Shelly devices.  Recently I stumbled onto an integration in the [Home Assistant Community Store](https://www.hacs.xyz) for Shelly. The GitHub project can be found [here](https://github.com/StyraHem/ShellyForHASS). Once this is installed and configured any new Shelly device you setup in the app is dynamically configured in the Home Assistant interface. After a quick rename and some Lovelace updates, I have the two Shelly devices configured in my Lovelace UI.
+
 ![Lovelace Card](/assets/images/lovelace.jpg)
 
 
@@ -73,7 +74,6 @@ Here is the final assembly:
 All in all it turned out great and was a fun project from designing to welding to geekery.
 
 
-#Script required for comments to be enabled.
 <script src="https://utteranc.es/client.js"
         repo="shaunandersonaz/shaunandersonaz.github.io"
         issue-term="pathname"
