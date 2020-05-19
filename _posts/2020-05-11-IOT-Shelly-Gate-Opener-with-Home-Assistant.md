@@ -47,6 +47,31 @@ Our simplified wiring schematic (I'm not an EE) looks something like this:
 So now we have a simple device that is getting power from the Mighty Mule board, and we have a switched input that works via a push-button, OR via the electronic switch via the Shelly phone app. I'm not going to go into the Shelly setup, there are plenty of places to find that info.  The one thing that is critical however is the 'Timer' configuraion. As the shelly is a switch, I don't want to have to switch it on, then quickly switch it off.  Luckily there is a timer function on the Shelly.  I set this to 1 second.  I can turn the switch on, then it automatically turns off after one second, exactly what I need to simulate an RF door opener.
 ![Timer Config](/assets/images/timerconfig.jpg)
 
+I mocked this up on my project desk and confirmed that everything was working. I used a 12V power supply to act as my board power, a small strip of 12V leds to ensure my 'Cycle' circuit was closing as desired and that the timer function was seemingly solid.
+
+# Home Assistant configuration
+I [Home Assistant](https://www.home-assistant.io) for my home automation platform.  In the past I have utilized a local, dockerized MQTT server to control my Shelly devices.  Recently I stumbled onto an integration in the [Home Assistant Community Store](https://www.hacs.xyz) for Shelly. The GitHub project can be found [here](https://github.com/StyraHem/ShellyForHASS). Once this is installed and configured any new Shelly device you setup in the app is dynamically configured in the Home Assistant interface. After a quick rename and some Lovelace updates, I have the two Shelly devices configured in my Lovelace UI.
+![Lovelace Card](/assets/images/lovelace.jpg)
+
+
+# More physical stuff...
+Now that everything in my POC appears to be working, I need to prepare the physical button setup. I found some small, discreet momentary buttons and a couple small project boxes on Amazon. Drill a few holes, strip a few wires, and voila, you have a fairly compact, clean looking wire-up.
+![Box Open](/assets/images/boxopen.jpg)
+
+And after it's closed up...
+![Box Closed](/assets/images/boxclosed.jpg)
+
+# Putting it all together
+Physical install was fairly trivial.  Following our diagram above, I quickly wired everything up to the Mighty Mule board.
+![Before-After](/assets/images/Before-After.jpg) 
+
+I sealed up some of the gaps to protect against rain (not much of a problem here in AZ) and attached the box to the wall next to each gate. 
+
+Here is the final assembly:
+![Final](/assets/images/finished.jpg)
+
+All in all it turned out great and was a fun project from designing to welding to geekery.
+
 
 #Script required for comments to be enabled.
 <script src="https://utteranc.es/client.js"
