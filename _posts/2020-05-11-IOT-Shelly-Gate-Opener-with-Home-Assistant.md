@@ -44,7 +44,7 @@ Our simplified wiring schematic (I'm not an EE) looks something like this:
 
 # Physical stuff...
 
-So now we have a simple device that is getting power from the Mighty Mule board, and we have a switched input that works via a push-button, OR via the electronic switch via the Shelly phone app. I'm not going to go into the Shelly setup, there are plenty of places to find that info.  The one thing that is critical however is the 'Timer' configuraion. As the shelly is a switch, I don't want to have to switch it on, then quickly switch it off.  Luckily there is a timer function on the Shelly.  I set this to 1 second.  I can turn the switch on, then it automatically turns off after one second, exactly what I need to simulate an RF door opener.
+So now we have a simple device that is getting power from the Mighty Mule board, and we have a switched input that works via a push-button, OR via the electronic switch via the Shelly phone app. I'm not going to go into the Shelly setup, there are plenty of places to find that info.  The one thing that is critical however is the 'Timer' configuration. As the shelly is a switch, I don't want to have to switch it on, then quickly switch it off.  Luckily there is a timer function on the Shelly.  I set this to 1 second.  I can turn the switch on, then it automatically turns off after one second, exactly what I need to simulate an RF door opener.
 ![Timer Config](/assets/images/timerconfig.jpg)
 
 I mocked this up on my project desk and confirmed that everything was working. I used a 12V power supply to act as my board power, a small strip of 12V leds to ensure my 'Cycle' circuit was closing as desired and that the timer function was seemingly solid.
