@@ -60,8 +60,8 @@ Need to switch the remote URL.  Verify current setting:
 
 ```
 git remote -v
-origin	git@github.com:ShaunAndersonAZ/ShaunAndersonAZ.github.io.git (fetch)
-origin	git@github.com:ShaunAndersonAZ/ShaunAndersonAZ.github.io.git (push)
+origin	https://github.com/ShaunAndersonAZ/ShaunAndersonAZ.github.io.git (fetch)
+origin	https://github.com/ShaunAndersonAZ/ShaunAndersonAZ.github.io.git (push)
 ```
 
 Change to SSH:
