@@ -11,6 +11,7 @@ I frequently install new Linux systems.  These are typically either RedHat, Cent
 Long ago I settled on OhMyZSH running the theme PowerLevel10K.  I created an ansible playbook to configure the system I installed to setup my terminal.
 
 Here is the playbook content:
+{% raw %}
 ```
 ---
   - name: Setup RH/Centos Systems
@@ -73,6 +74,7 @@ Here is the playbook content:
         insertafter: EOF
         line: "source /home/{{ user }}/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme"
 ```
+{% raw %}
 
 If you are using WSL you may need to configure the terminal to include the Meslo fonts on Windows.
 
