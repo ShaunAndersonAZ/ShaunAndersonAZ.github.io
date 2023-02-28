@@ -74,7 +74,7 @@ Here is the playbook content:
         insertafter: EOF
         line: "source /home/{{ user }}/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme"
 ```
-{% raw %}
+{% endraw %}
 
 If you are using WSL you may need to configure the terminal to include the Meslo fonts on Windows.
 
