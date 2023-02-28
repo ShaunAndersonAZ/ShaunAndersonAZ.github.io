@@ -24,7 +24,7 @@ Here is the playbook content:
 
     - name: Set user shell to zsh
       ansible.builtin.user:
-        name: "{{ user }}"
+        name: "\{\{ user \}\}"
         shell: /bin/zsh
       become: true
 
