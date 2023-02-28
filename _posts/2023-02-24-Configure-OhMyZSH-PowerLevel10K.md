@@ -24,7 +24,7 @@ Here is the playbook content:
 
     - name: Set user shell to zsh
       ansible.builtin.user:
-        name: "\\{\\{ user \\}\\}"
+        name: "{{ user }}"
         shell: /bin/zsh
       become: true
 
@@ -40,7 +40,7 @@ Here is the playbook content:
 
     - name: Install PowerLevel10K
       ansible.builtin.git:
-        repo: 'https://github.com/romkatv/powerlevel10k.git'
+        repo: https://github.com/romkatv/powerlevel10k.git
         dest: "/home/{{ user }}/.oh-my-zsh/custom/themes/powerlevel10k"
         depth: 1
 
