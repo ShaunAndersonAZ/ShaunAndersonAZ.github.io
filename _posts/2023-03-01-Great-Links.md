@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 header:
   overlay_image: #/assets/images/rocky-mtns.jpg
   caption: #"[CC License](https://creativecommons.org)"
