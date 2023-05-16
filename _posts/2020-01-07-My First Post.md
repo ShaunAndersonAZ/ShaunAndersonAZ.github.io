@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 header:
   title: "Updated title"
   overlay_image: /assets/images/rocky-mtns.jpg
