@@ -1,0 +1,188 @@
+/* =================================================    Widget Generator   ================================================= */
+
+.form-choice-image {
+    text-align: center;
+    height: 320px;
+    padding: 5px;
+}
+
+    .form-choice-image img {
+        width: 275px;
+    }
+
+#basic-form:hover, #styled-form:hover, .optin-style-picker:hover {
+    cursor: pointer;
+}
+
+#generated-container, #generated-basic-container {
+    background: #f5f5f5;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    font-size: 14px;
+    font-family: "Courier New", Courier, monospace;
+    overflow-x: scroll;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+/*Universal RF-Widget Styles */
+
+.rf-optin-container {
+    max-width: 296px;
+    min-width: 200px;
+    border: 1px solid #eee;
+    padding: 15px 20px 15px 15px;
+    font-family: "Times New Roman", Times, serif;
+    margin: 0 auto;
+}
+
+    .rf-optin-container p {
+        padding-top: 15px;
+    }
+
+.rf-optin-mobile {
+    width: 47%;
+    float: left;
+    margin-left: 3%;
+}
+
+.rf-optin-zip {
+    width: 47%;
+    float: left;
+    margin-right: 3%;
+}
+
+.rf-optin-input {
+    width: 100%;
+    font-size: 16px;
+    padding: 3px;
+}
+
+    .rf-optin-input::-webkit-input-placeholder {
+        color: #ccc;
+    }
+
+    .rf-optin-input:-moz-placeholder { /* Firefox 18- */
+        color: #ccc;
+    }
+
+    .rf-optin-input::-moz-placeholder { /* Firefox 19+ */
+        color: #ccc;
+    }
+
+    .rf-optin-input:-ms-input-placeholder {
+        color: #ccc;
+    }
+
+.rf-optin-submit {
+    width: 75%;
+    min-width: 150px;
+    line-height: 30px;
+    height: 35px;
+}
+
+    .rf-optin-submit:hover {
+        cursor: pointer;
+    }
+
+.rf-optin-arrow-down {
+    width: 0px;
+    height: 0px;
+}
+
+.rf-optin-button {
+    text-align: center;
+    clear: both;
+}
+/* Media query for under 990px width */
+
+@media only screen and (max-width : 990px) {
+    .form-choice-image {
+        height: auto;
+    }
+}
+/* Media query for under 290px width */
+
+@media only screen and (max-width : 290px) {
+    .rf-optin-container {
+        font-size: 14px;
+    }
+
+    .rf-optin-input {
+        font-size: 12px;
+    }
+}
+/*Widget Style Variations */
+
+.rf-optin-container1a {
+    background: -webkit-linear-gradient(#eee, #ddd);
+    background: -o-linear-gradient(#eee, #ddd);
+    background: -moz-linear-gradient(#eee, #ddd);
+    background: linear-gradient(#eee, #ddd);
+    border: 2px solid #ddd;
+}
+
+    .rf-optin-container1a p {
+        color: #666;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+    }
+
+    .rf-optin-container1a .rf-optin-submit {
+        -moz-box-shadow: inset 0px 1px 0px 0px #f29c93;
+        -webkit-box-shadow: inset 0px 1px 0px 0px #f29c93;
+        box-shadow: inset 0px 1px 0px 0px #f29c93;
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
+        background: -moz-linear-gradient( center top, #ae6011 5%, #ae6033 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+        background-color: #ae6033;
+        -webkit-border-top-left-radius: 0px;
+        -moz-border-radius-topleft: 0px;
+        border-top-left-radius: 0px;
+        -webkit-border-top-right-radius: 0px;
+        -moz-border-radius-topright: 0px;
+        border-top-right-radius: 0px;
+        -webkit-border-bottom-right-radius: 0px;
+        -moz-border-radius-bottomright: 0px;
+        border-bottom-right-radius: 0px;
+        -webkit-border-bottom-left-radius: 0px;
+        -moz-border-radius-bottomleft: 0px;
+        border-bottom-left-radius: 0px;
+        text-indent: 0;
+        border: 1px solid #d83526;
+        display: inline-block;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 15px;
+        font-weight: bold;
+        font-style: normal;
+        text-decoration: none;
+        text-align: center;
+        text-shadow: 1px 1px 0px #b23e35;
+        text-transform: uppercase;
+    }
+
+        .rf-optin-container1a .rf-optin-submit:hover {
+            background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
+            background: -moz-linear-gradient( center top, #ce0100 5%, #fe1a00 100% );
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
+            background-color: #ce0100;
+        }
+
+        .rf-optin-container1a .rf-optin-submit:active {
+            position: relative;
+            top: 1px;
+        }
+
+        .form-type-card {
+    cursor: pointer;
+    min-height: 530px;
+    text-align: center;
+}
+
+    .form-type-card .icon-magic {
+        font-size: 16rem;
+        text-align: center;
+        color: #7ab643;
+        display: block;
+        padding: 25px 0 44px 0;
+    }
